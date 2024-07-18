@@ -8,7 +8,8 @@ logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 # setting the main directory where all the imp and working code resides.
 main_code_directory = "Soil_Types"
 
-# structure of any and average professional ML or Data Science project with flask app and may be cloud deployment. 
+# structure of any and average professional ML or Data Science project with flask app and may be cloud deployment.
+# if you good at UI/UX please also add "static" dir for flask and any other necessary dir/files for other purposes.
 template_structure = ["data/README.md",
                       "notebooks/research.ipynb",
                       ".github/workflows/.gitkeep",
@@ -36,7 +37,7 @@ for file_path in template_structure:
         # logging or printing to understand the flow (logging is better though) 
         logging.info(f"Creating only directory: *{file_dir}* for the file: *{filename}*")
 
-    # creating a new file if it is not existing or re-create the same file if the file has no data or file-size is "0 KB".
+    # creating a new file if it is not existing or re-create the same file if the file has no data or file-size is "0 MB".
     if (not os.path.exists(file_path)) or (os.path.getsize(file_path) == 0):
         with open(file_path, "x") as f:
             logging.info(f"Creating empty file: {file_path}")
